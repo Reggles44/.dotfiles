@@ -1,0 +1,27 @@
+export AWS_DEFAULT_REGION="us-east-1"
+export CFLAGS="-Qunused-arguments"
+export CPPFLAGS="-Qunused-arguments"
+export DOCKER_DEFAULT_PLATFORM="linux/amd64"
+export LC_ALL="en_US.utf-8"
+export LANG="en_US.utf-8"
+export PYTHONWARNINGS="ignore"
+
+alias site="./jangl-site"
+alias dc="docker compose"
+alias dcrun="docker compose run --rm --no-deps"
+alias zshconfig="vim ~/.zshrc"
+alias nvimconfig="(cd ~/.config/nvim/ && nvim)"
+alias lg="lazygit"
+alias lzd="lazydocker"
+
+function dclogs {
+    local dir=$(basename $(cd "$(dirname .)" && pwd))
+    local project=${1/%\//}
+    docker logs --tail=${2:-10} -f "${dir}-${project}-1"
+}
+
+alias dnsquery='dscacheutil -q host -a name'
+dig() { echo && echo -e '\033[0;97m\033[41m Remember, this is a Mac! Use "dnsquery" instead! \033[0m' && /usr/bin/dig "$@" }
+
+ssh-add ~/.ssh/jangl_prod &>/dev/null
+
