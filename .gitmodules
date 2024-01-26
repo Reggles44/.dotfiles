@@ -4,4 +4,4 @@
 
 [submodule "jangl"]
 	path = jangl
-	url = https://github.com/Reggles44/.dotfiles-jangl.git
+	url = git@github.com:Reggles/.dotfiles-jangl.git
