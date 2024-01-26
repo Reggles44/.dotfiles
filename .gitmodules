@@ -1,7 +1,7 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
-	url = git@github.com:Reggles/init.lua.git
+	url = git@github.com:Reggles44/init.lua.git
 
 [submodule "jangl"]
 	path = jangl
-	url = git@github.com:Reggles/.dotfiles-jangl.git
+	url = git@github.com:Reggles44/.dotfiles-jangl.git
