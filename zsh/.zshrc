@@ -108,3 +108,5 @@ source ~/.zsh_profile
 export PATH=$HOME/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 alias vim='nvim'
+alias lg='lazygit'
+alias lzd='lazydocker'
