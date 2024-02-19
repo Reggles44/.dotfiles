@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.zsh_profile
+if [ -f ~/jangl ]; then source ~/jangl; fi
 
 export PATH=$HOME/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
