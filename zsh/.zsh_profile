@@ -5,3 +5,14 @@ export GOPATH=$HOME/go
 export GIT_EDITOR=$VIM
 export DOTFILES=$HOME/.dotfiles
 
+
+export PATH=$HOME/go/bin:$PATH
+
+
+alias my_ip="ip address | grep -o \"inet 192.*/\" | awk '{ print \$2 }' | tr / ' ' | xargs"
+alias work="cd ~/work"
+
+alias python="python3"
+
+alias dotFileInstall="$DOTFILES/install"
+alias bp="dotFileInstall && source ~/.zshrc"
