@@ -7,6 +7,7 @@ export DOTFILES=$HOME/.dotfiles
 
 
 export PATH=$HOME/go/bin:$PATH
+export PATH=$HOME/.local/go/bin:$PATH
 
 
 alias my_ip="ip address | grep -o \"inet 192.*/\" | awk '{ print \$2 }' | tr / ' ' | xargs"
