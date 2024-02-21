@@ -9,4 +9,6 @@ do
 done
 popd
 
-
+pushd ./jangl
+./stow
+popd

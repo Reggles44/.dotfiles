@@ -104,10 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.zsh_profile
-if [ -f ~/jangl ]; then source ~/jangl; fi
+[ -f ~/.jangl_profile ] && source ~/.jangl_profile
 
+export STOW_FOLDERS="bin,i3,jangl,nvim,tmux,zsh"
 export PATH=$HOME/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 alias vim='nvim'
-alias lg='lazygit'
-alias lzd='lazydocker'
