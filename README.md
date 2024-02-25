@@ -29,3 +29,6 @@ export $GOPATH=$HOME/go
 #### Docker Install
     curl -s https://get.docker.com | bash
 
+#### Docker Compose Install
+    sudo apt-get install docker-compose-plugin
+
