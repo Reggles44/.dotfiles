@@ -107,6 +107,4 @@ source ~/.zsh_profile
 [ -f ~/.jangl_profile ] && source ~/.jangl_profile
 
 export STOW_FOLDERS="bin,i3,jangl,nvim,tmux,zsh"
-export PATH=$HOME/bin:$PATH
-export PATH=/opt/homebrew/bin:$PATH
-alias vim='nvim'
+
