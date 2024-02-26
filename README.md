@@ -8,7 +8,22 @@
 
 ## Useful Commands 
 
-#### Go Install
+### Python
+
+#### Setup
+```
+sudo apt-get install python3
+python -m pip install -U pip || python -m ensurepip || sudo apt-get install python3-pip
+```
+
+#### pyenv
+    curl https://pyenv.run | bash
+
+#### pipenv
+    python -m pip install pipenv
+
+### Go
+#### Install
 ```
 export GOVERSION=go1.22.0.linux-arm64.tar.gz
 rm -rf $HOME/go
@@ -23,10 +38,12 @@ export PATH=$PATH:$HOME/go
 export $GOPATH=$HOME/go
 ```
 
-#### Rust Install
+### Rust
+#### Install
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-#### Docker Install
+### Docker
+#### Install
     curl -s https://get.docker.com | bash
 
 #### Docker Compose Install
