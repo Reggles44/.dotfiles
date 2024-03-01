@@ -103,8 +103,40 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.zsh_profile
-[ -f ~/.jangl_profile ] && source ~/.jangl_profile
-
 export STOW_FOLDERS="bin,i3,jangl,nvim,tmux,zsh"
+
+[ -f ~/.jangl_profile ] && source ~/.jangl_profile
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export XDG_CONFIG_HOME=$HOME/.config
+
+VIM="nvim"
+
+export GIT_EDITOR=$VIM
+export DOTFILES=$HOME/.dotfiles
+
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/scripts:$PATH
+export PATH=/opt/homebrew/bin:$PATH
+
+alias vim='nvim'
+alias python="python3"
+
+alias my_ip="ip address | grep -o \"inet 192.*/\" | awk '{ print \$2 }' | tr / ' ' | xargs"
+alias work="cd ~/work"
+
+alias dotFileInstall="$DOTFILES/install"
+alias bp="dotFileInstall && source ~/.zshrc"
+alias installDefault="sudo apt install $DEFAULT_PACKAGES -y"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export GOPATH=~/go
+export GOBIN="$GOPATH/bin"
+export GOROOT="/usr/local/go/"
+export PATH="/usr/local/go/bin:$GOBIN:$PATH"
 

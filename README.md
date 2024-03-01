@@ -12,7 +12,7 @@
 
 #### Setup
 ```
-sudo apt-get install python3
+sudo apt-get install python3 python3-pip python3-setuptools python3.11-venv
 python -m pip install -U pip || python -m ensurepip || sudo apt-get install python3-pip
 ```
 
