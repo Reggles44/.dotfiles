@@ -126,7 +126,7 @@ alias work="cd ~/work"
 
 alias dotFileInstall="$DOTFILES/install"
 alias bp="dotFileInstall && source ~/.zshrc"
-alias installDefault="sudo apt install $DEFAULT_PACKAGES -y"
+alias dotFileBuild="$DOTFILES/build"
 
 export ZSH_PYENV_QUIET=true
 alias python="python3"
