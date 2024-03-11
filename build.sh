@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+set -e
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+
 sudo apt install git stow zsh neovim npm
 sudo apt install shellcheck
 
