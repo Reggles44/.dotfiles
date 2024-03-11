@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
 
-sudo apt install git stow zsh tmux neovim npm
+sudo apt install git stow zsh tmux neovim fzf npm
 sudo apt install shellcheck
 
 # Python
