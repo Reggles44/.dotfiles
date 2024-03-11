@@ -1,0 +1,48 @@
+#!/usr/bin/env zsh
+
+set -e
+
+VERSION="1.20.6"
+shell_profile="$HOME/.zshrc"
+
+[ -z "$GOROOT" ] && GOROOT="$HOME/.go"
+[ -z "$GOPATH" ] && GOPATH="$HOME/go"
+
+print_help() {
+    echo "Usage: bash goinstall.sh OPTIONS"
+    echo -e "\nOPTIONS:"
+    echo -e "  --remove\tRemove currently installed version"
+    echo -e "  --version\tSpecify a version number to install"
+}
+
+
+if [ "$1" == "--remove" ]; then
+    rm -rf "$GOROOT"
+    echo "Go removed."
+    exit 0
+elif [ "$1" == "--help" ]; then
+    print_help
+    exit 0
+elif [ "$1" == "--version" ]; then
+    if [ -z "$2" ]; then # Check if --version has a second positional parameter
+        echo "Please provide a version number for: $1"
+    else
+        VERSION=$2
+    fi
+elif [ ! -z "$1" ]; then
+    echo "Unrecognized option: $1"
+    exit 1
+fi
+
+PACKAGE_NAME="go$VERSION.$PLATFORM.tar.gz"
+TEMP_DIRECTORY=$(mktemp -d)
+
+curl -o "$TEMP_DIRECTORY/go.tar.gz" https://storage.googleapis.com/golang/$PACKAGE_NAME
+if [ $? -ne 0 ]; then
+    echo "Download failed! Exiting."
+    exit 1
+fi
+
+tar -C "$GOROOT" --strip-components=1 -xzf "$TEMP_DIRECTORY/go.tar.gz"
+mkdir -p "${GOPATH}/"{src,pkg,bin}
+rm -f "$TEMP_DIRECTORY/go.tar.gz"
