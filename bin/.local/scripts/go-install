@@ -32,8 +32,8 @@ elif [[ ! -z "$1" ]]; then
     exit 1
 fi
 
-VERSION="1.20.6"
-PLATFORM="arm64"
+VERSION="1.22.1"
+PLATFORM="linux-arm64"
 PACKAGE_NAME="go$VERSION.$PLATFORM.tar.gz"
 TEMP_DIRECTORY=$(mktemp -d)
 
