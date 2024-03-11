@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+if [[ -z $DOTFILES ]]; then
+    DOTFILES=$HOME/.dotfiles 
+fi
+
 set -e
 sudo apt-get -y update
 sudo apt-get -y upgrade
@@ -18,8 +22,9 @@ sudo apt -y install shellcheck
 	curl https://pyenv.run | bash &&
 	python -m pip install pipenv
 } || { echo "PYTHON FAILED" }
+
 # Go
-./bin/.local/scripts/go-install
+./$DOTFILES/bin/.local/scripts/go-install
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
