@@ -3,7 +3,6 @@
 echo "INSTALLING GO!!!"
 set -e
 
-VERSION="1.20.6"
 
 [ -z "$GOROOT" ] && GOROOT="$HOME/.go"
 [ -z "$GOPATH" ] && GOPATH="$HOME/go"
@@ -33,6 +32,8 @@ elif [[ ! -z "$1" ]]; then
     exit 1
 fi
 
+VERSION="1.20.6"
+PLATFORM="arm64"
 PACKAGE_NAME="go$VERSION.$PLATFORM.tar.gz"
 TEMP_DIRECTORY=$(mktemp -d)
 
