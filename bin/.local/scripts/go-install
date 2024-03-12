@@ -43,8 +43,8 @@ if [[ $? -ne 0 ]]; then
     exit 1
 fi
 
-mkdir -p "$GOROOT"
+sudo mkdir -p "$GOROOT"
 tar -v -C "$GOROOT" --strip-components=1 -xzf "$TEMP_DIRECTORY/go.tar.gz"
-mkdir -p "${GOPATH}/"{src,pkg,bin}
+sudo mkdir -p "${GOPATH}/"{src,pkg,bin}
 rm -f "$TEMP_DIRECTORY/go.tar.gz"
 
