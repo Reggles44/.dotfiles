@@ -8,7 +8,7 @@ set -e
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-sudo apt -y install git stow zsh tmux neovim fzf npm
+sudo apt -y install git stow zsh tmux neovim fzf nvm
 sudo apt -y install shellcheck
 
 # Python
