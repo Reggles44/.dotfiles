@@ -44,7 +44,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 sudo mkdir -p "$GOROOT"
-tar -v -C "$GOROOT" --strip-components=1 -xzf "$TEMP_DIRECTORY/go.tar.gz"
+sudo tar -v -C "$GOROOT" --strip-components=1 -xzf "$TEMP_DIRECTORY/go.tar.gz"
 sudo mkdir -p "${GOPATH}/"{src,pkg,bin}
 rm -f "$TEMP_DIRECTORY/go.tar.gz"
 
