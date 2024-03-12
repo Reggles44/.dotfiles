@@ -31,7 +31,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Node JS
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-nvm install-latest-npm
 
 # Docker
 curl -s https://get.docker.com | bash
