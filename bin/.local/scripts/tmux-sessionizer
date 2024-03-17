@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-selected=$(find ~/dev ~/work ~/projects ~/personal ~/ -mindepth 1 -maxdepth 2 -type d | fzf)
+selected=$(find ~/dev ~/work ~/work/jangl-site ~/projects ~/personal  ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
 if [[ -z $selected ]]; then
     exit 1
 fi
